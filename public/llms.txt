@@ -1,0 +1,55 @@
+# אילנית שייט שרון — Generative Engine Optimization Map
+
+> A בריאות ורווחה business.
+
+---
+
+## Pages
+
+### Home
+https://-8adfbab4.zappy5.app
+
+### About
+https://-8adfbab4.zappy5.app/about
+
+### Services
+https://-8adfbab4.zappy5.app/services
+
+### Contact
+https://-8adfbab4.zappy5.app/contact
+
+## Legal & Policy
+
+### Privacy Policy
+https://-8adfbab4.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-8adfbab4.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-8adfbab4.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About אילנית שייט שרון
+אילנית שייט שרון is a business in the בריאות ורווחה industry.
+
+## Target Audience
+- אנשי מקצוע מחפשי איזון
+- פורשים מודעים לבריאות
+- חובבי יוגה ומדיטציה
+
+## Industry
+בריאות ורווחה
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-8adfbab4.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-8adfbab4.zappy5.app/robots.txt
