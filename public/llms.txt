@@ -1,6 +1,4 @@
-# אילנית שייט שרון — Generative Engine Optimization Map
-
-> A בריאות ורווחה business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -36,17 +34,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About אילנית שייט שרון
-אילנית שייט שרון is a business in the בריאות ורווחה industry.
-
-## Target Audience
-- אנשי מקצוע מחפשי איזון
-- פורשים מודעים לבריאות
-- חובבי יוגה ומדיטציה
-
-## Industry
-בריאות ורווחה
-
+## About Business
 ---
 
 # Additional Resources

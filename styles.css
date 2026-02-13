@@ -4133,9 +4133,627 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* ========== GRID MOBILE COLUMN FIX (zappy-grid-column-fix) ========== */
+/* Forces AI-generated grids to single-column on mobile */
+@media (max-width: 768px) {
+  /* Force single-column for grids with class names like gallery-grid, features-grid */
+  [class*="-grid"]:not([data-zappy-auto-grid="true"]):not([data-zappy-explicit-columns="true"]) {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Reset column/row spanning items on mobile - they cause overflow */
+  [class*="-grid"] > [class*="-large"],
+  [class*="-grid"] > [class*="-item-large"],
+  [class*="-grid"] > [style*="grid-column: span"],
+  [class*="-grid"] > [style*="grid-row: span"] {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
+/* ========== END GRID MOBILE COLUMN FIX ========== */
+
+
+/* Zappy Divider Padding Fix (top dividers) */
+.home-services-section {
+  padding-top: 0 !important;
+}
+.services-container {
+  padding-top: calc(0px + 32px) !important;
+}
+
+@media (max-width: 768px) {
+.home-services-section {
+  padding-top: 0 !important;
+}
+.services-container {
+  padding-top: calc(0px + 28px) !important;
+}
+}
+
+.home-services-section > [data-zappy-top-divider-fix="true"] {
+  line-height: 0 !important;
+}
+.home-services-section > [data-zappy-top-divider-fix="true"] svg {
+  display: block !important;
+}
+
+.home-testimonials-section {
+  padding-top: 0 !important;
+}
+.testimonials-container {
+  padding-top: calc(60px + 12px) !important;
+}
+
+@media (max-width: 768px) {
+.home-testimonials-section {
+  padding-top: 0 !important;
+}
+.testimonials-container {
+  padding-top: calc(40px + 10px) !important;
+}
+}
+
+.home-testimonials-section > [data-zappy-top-divider-fix="true"] {
+  line-height: 0 !important;
+}
+.home-testimonials-section > [data-zappy-top-divider-fix="true"] svg {
+  display: block !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   V2 MOBILE LOGO WIDTH FIX (Applied: 2026-02-04T15:17:59.929Z)
+   Purpose:
+   - Override mobile navbar logo width to prevent overflow on small screens.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 128px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (Home-Hero)
+   Added: 2026-02-08T17:07:07.789Z
+   ═══════════════════════════════════════════════════════════ */
+.home-Hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1px;
+}
+
+.home-Hero-section .hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+  z-index: 0;
+  display: block;
+}
+
+.home-Hero-section .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(30, 42, 58, 0.9) 0%, rgba(30, 42, 58, 0.75) 35%, rgba(30, 42, 58, 0.55) 55%, rgba(30, 42, 58, 0.25) 75%, rgba(30, 42, 58, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-Hero-section .hero-content-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-Hero-section .hero-content {
+  max-width: 640px;
+  width: 100%;
+  text-align: start;
+  color: var(--text-light);
+}
+
+.home-Hero-section h1 {
+  font-family: 'David Libre', 'Libre Baskerville', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--text-light);
+  margin: 0 0 24px 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.home-Hero-section h3 {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0 0 32px 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.home-Hero-section .hero-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-Hero-section .btn-primary {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--text-light);
+  padding: 14px 36px;
+  border-radius: 0px;
+  border: 1px solid var(--secondary);
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home-Hero-section .btn-primary:hover {
+  background: #5a9d9e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-Hero-section .btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-light);
+  padding: 14px 36px;
+  border-radius: 0px;
+  border: 1px solid var(--text-light);
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home-Hero-section .btn-secondary:hover {
+  background: rgba(251, 250, 247, 0.1);
+  border-color: rgba(251, 250, 247, 0.9);
+  transform: translateY(-2px);
+}
+
+.home-Hero-section .hero-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--border-light);
+  opacity: 0.25;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .home-Hero-section {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .home-Hero-section .hero-background-image {
+    object-position: center center;
+  }
+
+  .home-Hero-section .hero-overlay {
+    background: linear-gradient(180deg, rgba(30, 42, 58, 0.85) 0%, rgba(30, 42, 58, 0.75) 50%, rgba(30, 42, 58, 0.65) 100%);
+  }
+
+  .home-Hero-section .hero-content-wrapper {
+    padding: 0 16px;
+    min-height: auto;
+  }
+
+  .home-Hero-section .hero-content {
+    max-width: 100%;
+  }
+
+  .home-Hero-section h1 {
+    font-size: 2.25rem;
+    margin-bottom: 16px;
+  }
+
+  .home-Hero-section h3 {
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+  }
+
+  .home-Hero-section .hero-cta-row {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .home-Hero-section .btn-primary,
+  .home-Hero-section .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (Home-about)
+   Added: 2026-02-08T17:11:04.103Z
+   ═══════════════════════════════════════════════════════════ */
+.home-about-section {
+  position: relative;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 80px 0 80px 0;
+  overflow: visible;
+}
+
+.home-about-overlap-band {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: #EDEAE3;
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1;
+}
+
+.home-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.home-about-imagery {
+  position: relative;
+}
+
+.home-about-main-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.home-about-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 0 rgba(31, 41, 55, 0.10);
+}
+
+.home-about-detail-tile {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  width: 140px;
+  height: 140px;
+  z-index: 3;
+}
+
+.home-about-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14);
+}
+
+.home-about-content {
+  padding-top: 8px;
+}
+
+.home-about-title {
+  font-family: 'David Libre', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0 0 28px 0;
+  letter-spacing: 0.01em;
+}
+
+.home-about-paragraph {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin: 0 0 20px 0;
+}
+
+.home-about-values {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-about-value-item {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin: 0;
+  padding-inline-start: 24px;
+  position: relative;
+}
+
+.home-about-value-item::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .home-about-section {
+    padding: 100px 0 60px 0;
+  }
+
+  .home-about-overlap-band {
+    height: 20px;
+    top: -10px;
+  }
+
+  .home-about-container {
+    padding: 0 16px;
+  }
+
+  .home-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-about-imagery {
+    order: 1;
+  }
+
+  .home-about-content {
+    order: 2;
+    padding-top: 0;
+  }
+
+  .home-about-main-image-wrapper {
+    max-width: 100%;
+  }
+
+  .home-about-detail-tile {
+    width: 100px;
+    height: 100px;
+    bottom: -12px;
+    left: -12px;
+  }
+
+  .home-about-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .home-about-paragraph {
+    font-size: 0.9375rem;
+    margin-bottom: 16px;
+  }
+
+  .home-about-values {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .home-about-value-item {
+    font-size: 0.9375rem;
+    padding-inline-start: 20px;
+  }
+
+  .home-about-value-item::before {
+    top: 6px;
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (Home-testimonials)
+   Added: 2026-02-08T17:13:19.211Z
+   ═══════════════════════════════════════════════════════════ */
+.home-testimonials-section {
+  position: relative;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 80px 16px 80px 16px;
+  overflow: visible;
+}
+
+.home-testimonials-divider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.home-testimonials-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.home-testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.home-testimonials-header {
+  margin-bottom: 48px;
+  text-align: start;
+}
+
+.home-testimonials-header h2 {
+  font-family: 'David Libre', 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.home-testimonials-intro {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--text-light);
+  max-width: 700px;
+  opacity: 0.9;
+}
+
+.home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home-testimonials-card {
+  background: transparent;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 200px;
+}
+
+.home-testimonials-quote {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-light);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.home-testimonials-author {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0;
+  opacity: 0.85;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-dark);
+}
+
+@media (max-width: 768px) {
+  .home-testimonials-section {
+    padding: 100px 16px 60px 16px;
+  }
+
+  .home-testimonials-header h2 {
+    font-size: 2rem;
+  }
+
+  .home-testimonials-intro {
+    font-size: 0.9375rem;
+  }
+
+  .home-testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .home-testimonials-card {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .home-testimonials-quote {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-testimonials-card:last-child {
+    grid-column: span 2;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+/* ZAPPY_POSTGEN_GUARD_TOP_DIVIDER_REMOVAL:Home-testimonials (home-testimonials) — repositioned top divider to overlap previous section boundary */
+[data-layout-spec="Home-testimonials"] .home-testimonials-divider-wrapper {
+  transform: translateY(-100%) !important;
+}
+[data-layout-spec="Home-testimonials"].home-testimonials-section,
+[data-layout-spec="Home-testimonials"] .home-testimonials-section {
+  padding-top: 60px !important;
+}
+
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
+/* NOTE: Includes both html[dir="rtl"] AND [dir="rtl"] selectors as fallback */
+/* because some pages may be wrapped with <html lang="en"> (missing dir="rtl" on html) */
+/* but still have dir="rtl" on <body> or other ancestor elements */
 
 @media (max-width: 768px) {
   /* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
@@ -4144,7 +4762,14 @@ body.accessibility-widget-visible ._access-menu {
   html[dir="rtl"] nav .mobile-toggle,
   html[dir="rtl"] header .mobile-toggle,
   html[dir="rtl"] .nav-container .mobile-toggle,
-  html[dir="rtl"] .mobile-toggle {
+  html[dir="rtl"] .mobile-toggle,
+  [dir="rtl"] .navbar .mobile-toggle,
+  [dir="rtl"] nav .mobile-toggle,
+  [dir="rtl"] header .mobile-toggle,
+  [dir="rtl"] .nav-container .mobile-toggle,
+  [dir="rtl"] .mobile-toggle,
+  html[lang="he"] .mobile-toggle,
+  html[lang="ar"] .mobile-toggle {
     left: auto !important;
     right: 15px !important;
   }
@@ -4154,7 +4779,14 @@ body.accessibility-widget-visible ._access-menu {
   html[dir="rtl"] nav .phone-header-btn,
   html[dir="rtl"] header .phone-header-btn,
   html[dir="rtl"] .nav-container .phone-header-btn,
-  html[dir="rtl"] .phone-header-btn {
+  html[dir="rtl"] .phone-header-btn,
+  [dir="rtl"] .navbar .phone-header-btn,
+  [dir="rtl"] nav .phone-header-btn,
+  [dir="rtl"] header .phone-header-btn,
+  [dir="rtl"] .nav-container .phone-header-btn,
+  [dir="rtl"] .phone-header-btn,
+  html[lang="he"] .phone-header-btn,
+  html[lang="ar"] .phone-header-btn {
     left: 15px !important;
     right: auto !important;
   }
@@ -4164,16 +4796,374 @@ body.accessibility-widget-visible ._access-menu {
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
   html[dir="rtl"] .nav-container .nav-menu,
-  html[dir="rtl"] .nav-menu {
+  html[dir="rtl"] .nav-menu,
+  [dir="rtl"] .navbar .nav-menu,
+  [dir="rtl"] nav .nav-menu,
+  [dir="rtl"] header .nav-menu,
+  [dir="rtl"] .nav-container .nav-menu,
+  [dir="rtl"] .nav-menu,
+  html[lang="he"] .nav-menu,
+  html[lang="ar"] .nav-menu {
     left: auto !important;
     right: 0 !important;
   }
   
   /* RTL Mobile Menu Links - text align right */
   html[dir="rtl"] .nav-menu a,
-  html[dir="rtl"] .nav-menu li {
+  html[dir="rtl"] .nav-menu li,
+  [dir="rtl"] .nav-menu a,
+  [dir="rtl"] .nav-menu li,
+  html[lang="he"] .nav-menu a,
+  html[lang="he"] .nav-menu li,
+  html[lang="ar"] .nav-menu a,
+  html[lang="ar"] .nav-menu li {
     text-align: right !important;
   }
 }
 
 /* ========== END RTL MOBILE NAVBAR FIX ========== */
+
+
+/* ========== NAV CONTAINER MIN-HEIGHT FIX (nav-container-min-height-fix) ========== */
+/* On mobile, all nav children are position:absolute/fixed (out of flow), */
+/* so height:auto collapses to 0px. min-height ensures the navbar is visible. */
+
+/* DEFENSIVE: Ensure CTA container is visible on desktop */
+/* This guards against CSS minifiers (CleanCSS level 2) that may pull */
+/* the mobile display:none rule out of its @media query */
+@media (min-width: 769px) {
+  .nav-cta-container,
+  .nav-cta-container:not(:has(.lang-switcher)) {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    min-height: 70px !important;
+    position: relative !important;
+  }
+  /* Reset nav-cta-container desktop styling (box-shadow/padding) on mobile */
+  .nav-cta-container {
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  /* Hide nav-cta-container when no lang-switcher (only CTA btn, which is hidden on mobile) */
+  .nav-cta-container:not(:has(.lang-switcher)) {
+    display: none !important;
+  }
+}
+
+/* ========== END NAV CONTAINER MIN-HEIGHT FIX ========== */
+
+
+/* ========== HERO IMAGE GRADIENT FIX (hero-image-gradient-fix) ========== */
+/* Prevent hero image fade gradient from bleeding over headline text below. */
+/* The .image-fade-gradient has bottom: -30px which extends below its parent; */
+/* on mobile stacked layout this overlaps the h1 text. */
+
+@media (max-width: 768px) {
+  .hero-image-column {
+    overflow: hidden !important;
+  }
+  .image-fade-gradient {
+    bottom: 0 !important;
+  }
+}
+
+/* ========== END HERO IMAGE GRADIENT FIX ========== */
+
+
+/* ========== GRID RESPONSIVE FIX (zappy-grid-mobile-fix) ========== */
+/* Ensures grids with explicit columns use CSS variable and are responsive on mobile */
+
+/* DESKTOP: Explicit column grids use CSS variable for grid-template-columns */
+/* This rule reads the --zappy-grid-cols CSS variable set in inline styles */
+[data-zappy-explicit-columns="true"] {
+  display: grid !important;
+  grid-template-columns: var(--zappy-grid-cols, repeat(2, minmax(0, 1fr))) !important;
+}
+
+/* ZOOM WRAPPER: Ensure overflow:hidden for crop zoom effect */
+/* The wrapper clips the oversized image to create the zoom/crop effect */
+[data-zappy-zoom-wrapper="true"] {
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  /* Auto-grid (AI-generated) grids - force single column on mobile */
+  .zappy-preserve-css-grid[data-zappy-auto-grid="true"],
+  [data-zappy-auto-grid="true"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Media-only grid items - constrain height on mobile */
+  .zappy-preserve-css-grid[data-zappy-auto-grid="true"] > .zappy-grid-item-media-only,
+  [data-zappy-auto-grid="true"] > .zappy-grid-item-media-only {
+    height: auto !important;
+    max-height: 300px !important;
+  }
+  
+  .zappy-preserve-css-grid[data-zappy-auto-grid="true"] > .zappy-grid-item-media-only img,
+  [data-zappy-auto-grid="true"] > .zappy-grid-item-media-only img {
+    height: auto !important;
+    max-height: 300px !important;
+  }
+  
+  /* Full-width mode zoom wrappers - ensure image is visible (not collapsed) */
+  [data-zappy-zoom-wrapper-width-mode="full"] img {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
+    left: auto !important;
+    top: auto !important;
+    object-fit: cover !important;
+  }
+  
+  /* MOBILE: Explicit column grids - force single column on mobile */
+  [data-zappy-explicit-columns="true"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Inline grid with fixed pixel columns - make responsive */
+  .zappy-inline-grid-active.zappy-preserve-css-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* AI-generated section grids with common naming patterns */
+  /* These often have fixed pixel column widths that don't adapt to mobile */
+  [class*="-grid"]:not([data-zappy-auto-grid]):not(.zappy-preserve-css-grid):not([data-zappy-explicit-columns="true"]) {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Reset any column/row spanning items on mobile - they cause overflow */
+  /* Gallery grids often have -large items that span multiple columns */
+  [class*="-grid"] > [class*="-large"],
+  [class*="-grid"] > [class*="-item-large"],
+  [class*="-grid"] > [style*="grid-column: span"],
+  [class*="-grid"] > [style*="grid-row: span"] {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+  
+  /* Common AI-generated visual/frame containers that may overflow */
+  [class*="-visual"],
+  [class*="-frame"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  
+  /* CRITICAL: Constrain zoom wrappers on mobile - they often have fixed pixel widths */
+  [data-zappy-zoom-wrapper="true"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+  
+  /* Fix zoom wrapper images on mobile - make responsive */
+  [data-zappy-zoom-wrapper="true"] img {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  
+  /* ========== MAIN PADDING FIX ========== */
+  /* Fix double-padding from old V2 mobile CSS that applied padding to both main and sections */
+  /* Exclude ecommerce-page which needs its own horizontal padding for proper mobile layout */
+  main:not(.ecommerce-page) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Hero sections need flex-column on mobile for proper stacking */
+  section[class*="hero"],
+  .home-Hero-section {
+    flex-direction: column !important;
+  }
+  
+  /* Hero sections need extra padding-top to clear the sticky navbar */
+  /* The navbar is ~70px tall, so hero needs at least 100px padding-top */
+  /* IMPORTANT: Use section tag to avoid matching child elements like buttons that contain "-hero-section" in their BEM class */
+  section[class*="-hero-section"]:first-of-type,
+  main > section:first-child {
+    padding-top: 100px !important;
+  }
+  
+  .hero-container,
+  section[class*="hero"] > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* ========== HERO WIDTH FIX ========== */
+  /* Remove nested horizontal padding - only section should have horizontal padding */
+  .home-Hero-section .hero-container,
+  .home-Hero-section .hero-content,
+  .home-Hero-section .hero-metrics,
+  .home-Hero-section .hero-image-column,
+  .home-Hero-section .hero-image-frame,
+  .home-Hero-section .container,
+  .home-Hero-section .wrapper,
+  section[class*="hero"] .hero-container,
+  section[class*="hero"] .hero-content,
+  section[class*="hero"] .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+  }
+  
+  /* ========== HERO VERTICAL SPACING FIX ========== */
+  .home-Hero-section .hero-content,
+  .home-Hero-section .hero-container,
+  .home-Hero-section .hero-image-column {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  
+  .hero-cta-row {
+    padding: 8px 0 !important;
+    margin: 8px 0 12px !important;
+  }
+  
+  .hero-content {
+    gap: 12px !important;
+  }
+  
+  .hero-metrics {
+    gap: 10px !important;
+  }
+  
+  .metric-card {
+    padding: 12px !important;
+  }
+  
+  .hero-container {
+    gap: 16px !important;
+  }
+}
+
+/* ========== HERO SECTION WIDTH CONSTRAINT (ALL VIEWPORTS) ========== */
+/* Prevent hero sections from exceeding viewport width.                */
+/* Root cause: AI-generated CSS may use width:100vw or add horizontal  */
+/* padding to the section, causing it to overflow the viewport.        */
+/* NOTE: Do NOT add overflow:hidden here — it clips SVG bottom dividers */
+/* that need overflow:visible to extend into the next section.          */
+section[class*="hero" i],
+section[class*="Hero"],
+section[data-hero-type] {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ========== SVG DIVIDER OVERLAY FIX ========== */
+/* Many AI sections place .section-divider absolutely at the bottom of a section,
+   which can overlap/cut off the last row of content. The safest CSS-only fix
+   is to prevent overlay by forcing the divider into normal flow. */
+.section-divider {
+  position: relative !important;
+  bottom: auto !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: auto !important;
+  margin-top: 16px !important;
+}
+
+.section-divider svg {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Exclude small icon SVGs from full-width sizing - these are decorative icons, not wave dividers */
+.section-divider svg.divider-icon,
+.section-divider svg[width="32"],
+.section-divider svg[width="24"],
+.section-divider svg[width="48"],
+.section-divider svg[viewBox="0 0 32 32"],
+.section-divider svg[viewBox="0 0 24 24"],
+.section-divider svg[viewBox="0 0 48 48"] {
+  width: auto !important;
+  height: auto !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+}
+
+/* ========== END SVG DIVIDER OVERLAY FIX ========== */
+
+/* ========== HORIZONTAL-PAIR GRID MEDIA FIX ========== */
+/* Ensures media in horizontal-pair grids fills columns correctly */
+
+/* Image/video media cells: stretch to fill the grid cell */
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"]:not([data-element-type="icon"]) {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: stretch !important;
+  min-height: 0 !important;
+}
+
+/* Icon media cells: use flex for centering but allow alignment to be controlled by the editor */
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"][data-element-type="icon"] {
+  position: relative !important;
+  display: flex !important;
+  min-height: 0 !important;
+}
+
+/* Images/videos: preserve aspect ratio while filling column width */
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > img,
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > video {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  flex: 0 0 auto !important;
+  min-height: 0 !important;
+  display: block !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Icons/SVG: respect their explicit pixel size from the editor */
+/* Do NOT force width/height: 100% - icons should use their inline size */
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > svg,
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > .iconify,
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > .iconify svg {
+  flex: 0 0 auto !important;
+  min-height: 0 !important;
+  display: inline-block !important;
+}
+
+/* Non-media grid items (buttons, text, etc.) should NOT stretch */
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] > .zappy-inserted-element:not([data-zappy-media-cell]) {
+  align-self: start !important;
+  height: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+
+/* Buttons inside non-media grid items should NOT stretch horizontally */
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] > .zappy-inserted-element:not([data-zappy-media-cell]) .btn,
+.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] > .zappy-inserted-element:not([data-zappy-media-cell]) [data-element-type="button"] {
+  width: auto !important;
+  flex: 0 0 auto !important;
+}
+
+/* ========== END HORIZONTAL-PAIR GRID MEDIA FIX ========== */
+
+/* ========== END GRID RESPONSIVE FIX ========== */

@@ -73,7 +73,7 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
@@ -321,6 +321,31 @@
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
+
+    <style id="mobile-lang-menu-deployed-css">
+    @media (max-width: 768px) {
+      .lang-switcher,
+      .nav-cta-container .lang-switcher,
+      .nav-container .lang-switcher,
+      .navbar .lang-switcher,
+      .navbar .nav-cta-container .lang-switcher,
+      .nav-icons-left .lang-switcher,
+      .nav-ecommerce-icons .lang-switcher { display: none !important; }
+      .mobile-lang-menu { width: 100%; border-top: 1px solid rgba(128,128,128,0.2); padding: 8px 0 0 0; margin-top: 8px; }
+      .mobile-lang-toggle { display: flex !important; align-items: center; justify-content: space-between; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; font-size: 15px; color: inherit; font-family: inherit; }
+      .mobile-lang-toggle::after { content: ''; display: inline-block; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.3s ease; margin-left: 8px; }
+      .mobile-lang-toggle.expanded::after { transform: rotate(-135deg); }
+      .mobile-lang-options { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .mobile-lang-options.expanded { max-height: 300px; }
+      .mobile-lang-option { display: flex !important; align-items: center; gap: 10px; padding: 10px 24px; text-decoration: none; color: inherit; font-size: 14px; font-family: inherit; }
+      .mobile-lang-option:hover { background: rgba(128,128,128,0.1); }
+      .mobile-lang-option.active { font-weight: 600; opacity: 0.7; pointer-events: none; }
+      .mobile-lang-option img { width: 20px; height: 20px; border-radius: 50%; }
+    }
+    @media (min-width: 769px) {
+      .mobile-lang-menu { display: none !important; }
+    }
+    </style>
 </head>
 <body>
 
@@ -328,7 +353,7 @@
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
   <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
 </div>
-  <nav class="navbar" dir="rtl"><button class="mobile-toggle" id="mobileToggle" aria-label="תפריט"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="התקשר"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo" /></a></div><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li></ul></div><div class="nav-cta-container"><a href="/contact" class="nav-cta-btn">צור קשר</a></div></div></nav>
+  <nav class="navbar" dir="rtl"><button class="mobile-toggle" id="mobileToggle" aria-label="תפריט"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="התקשר"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo"></a></div><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li></ul></div><div class="nav-cta-container"><a href="/contact" class="nav-cta-btn">צור קשר</a></div></div></nav>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
@@ -673,7 +698,7 @@
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
-          : '[business_phone]';
+          : '054-6650530';
         
         window.location.href = 'tel:' + phoneNumber;
         console.log('[Navbar] Phone button clicked');
@@ -744,20 +769,20 @@
     <div class="service-block" id="service-1">
       <div class="service-content">
         <div class="service-text">
-          <h3>ריפוי אנרגטי אישי</h3>
-          <p>מפגש ריפוי אנרגטי מעמיק המשלב טכניקות רייקי, איזון צ'אקרות וריפוי בתדרים גבוהים. המטפלת מתאימה את הטיפול לצרכים האנרגטיים הייחודיים שלך, תוך יצירת מרחב בטוח ומכיל לשחרור חסימות רגשיות ואנרגטיות.</p>
-          <p>הטיפול מתבצע בשכיבה נוחה, כשהמטפלת מעבירה אנרגיית ריפוי דרך נקודות מפתח בגוף. רבים מדווחים על תחושת הרפיה עמוקה, בהירות נפשית ושיפור במצב הרוח כבר לאחר המפגש הראשון.</p>
+          <h3><font color="#004080">רפואה האינטגרטיבית המאחדת&nbsp;</font></h3>
+          <p><br>הרפואה האינטגרטיבית המאחדת היא גישה טיפולית הוליסטית, המשלבת בין רפואה מערבית מדעית לרפואה מזרחית עתיקה, בין מדע ורוח, בין אנרגיה לתודעה.הגישה רואה את האדם כישות הוליסטית: גוף, נפש ונשמה/תודעה.<br><br>על פי השיטה, כל מחלה, כאב או קושי רגשי נובעים ממשבר פנימי או טראומה שלא עובדו במלואם. המשבר משבש את זרימת האנרגיה בגוף ויוצר חוסר איזון - רגשי, נפשי או פיזי.<br>בגישה זו, בריאות אינה רק היעדר מחלה, אלא מצב של שלמות, כפי שהוגדרה על ידי ארגון הבריאות העולמי:<br>"מצב של רווחה גופנית, נפשית וחברתית, ולא רק העדר מחלה או נכות."<br><br>הטיפול אינו מתמקד רק בהפחתת תסמינים, אלא בחשיפת שורש הבעיה - משבר אישי, רגשי או תודעתי - ובהחזרת זרימת האנרגיה הטבעית והחיוניות לגוף ולנפש. זהו תהליך של הבנה, שינוי ותנועה פנימית שמוביל לאיזון, חיוניות ורווחה עמוקה.<br></p>
+          
         </div>
         <div class="service-highlights">
-          <div class="highlight-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"></circle>
-              <path d="M20 8V20L28 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
-          </div>
+          
           <div class="highlight-content">
-            <p><strong>למי זה מתאים:</strong> אנשים החווים מתח רגשי, עייפות כרונית, או המחפשים איזון אנרגטי ורוחני. מומלץ במיוחד למי שחווה תקופות של שינוי או מעבר בחיים.</p>
-            <p><strong>מה כולל המפגש:</strong> שיחת פתיחה אישית, טיפול אנרגטי של 60 דקות, סיכום והמלצות לטיפוח עצמי ביתי. כולל שימוש באבנים מרפאות ושמנים אתריים איכוtiים.</p>
+            <p><strong><strong>למי זה מתאים:</strong></strong><br>הטיפול מתאים לילדים, נוער ומבוגרים הפתוחים לתהליך של ריפוי והתבוננות פנימית.<br>
+לאנשים החווים כאב פיזי או רגשי, תסמינים חוזרים, מחלה כרונית או אקוטית, חרדה, טראומה או פוסט־טראומה.<br>
+מתאים גם למי שמרגיש תקיעות, חוסר איזון, בלבול או ריקנות פנימית, ולמי שמחפש שינוי, ריפוי עמוק וחיבור מחודש לעצמו - לגוף, לנפש ולתודעה.&nbsp;&nbsp;<strong></strong></p>
+            <p><strong>מה כולל המפגש:</strong><br>המפגש כולל שיחה מעמיקה והיכרות אישית, שמטרתה להבין את הרקע הפיזי, הרגשי והתודעתי שלך.<br>
+במהלך המפגש מתבצע אבחון ראשוני, ולאחריו טיפול מותאם אישית באמצעות כלים מעולם הרפואה האינטגרטיבית המאחדת.<br>
+בסיום המפגש ניתנות הנחיות להמשך תהליך אישי, לחיזוק החיוניות ולתמיכה בריפוי גם בין המפגשים - בקצב שלך ובמרחב בטוח ומכיל.&nbsp;<br><br><b><font color="#2f4f6d">ליווי בין הטיפולים:<br></font></b>
+אני ממשיכה ללוות אותך גם מרחוק, בקצב שלך, מתוך נוחות והקשבה לתהליך.&nbsp;&nbsp;</p>
           </div>
         </div>
       </div>
@@ -768,9 +793,14 @@
     <div class="service-block" id="service-2">
       <div class="service-content">
         <div class="service-text">
-          <h3>מדיטציה מודרכת קבוצתית</h3>
-          <p>מפגשי מדיטציה שבועיים בקבוצה אינטימית, המשלבים טכניקות מדיטציה שונות - ממדיטציית מיינדפולנס ועד מדיטציות ויזואליזציה מרפאות. כל מפגש מתמקד בנושא אחר: שחרור לחץ, פיתוח אהבה עצמית, חיבור לאינטואיציה ועוד.</p>
-          <p>האווירה הקבוצתית יוצרת אנרגיה חזקה של תמיכה הדדית וצמיחה משותפת. המפגשים מתקיימים במרחב מעוצב בקפידה עם תאורה רכה, מוזיקה מרגיעה וריחות טבעיים המעודדים הרפיה עמוקה.</p>
+          <h3><font color="#004080">סאונד הילינג</font></h3>
+          <p><br>סאונד הילינג הוא טיפול הוליסטי המשתמש בצלילים, תדרים ורטטים כדי להשפיע על גוף, נפש ותודעה. הגוף, שמורכב ברובו ממים, מגיב לתדרים הרמוניים ויציבים, והחשיפה להם מאפשרת לו להירגע, לאזן את מערכת העצבים ולהפעיל מנגנוני ריפוי טבעיים.<br>
+הקערות הטיבטיות והגונג יוצרים צלילים עמוקים שמתפשטים בגוף, מחודדים לרקמות ולמערכת העצבים, ומעודדים זרימה, ויסות ושחרור מתחים פנימיים. הצלילים תומכים ברגיעה, עיבוד רגשי, שחרור דפוסים ישנים וחיבור לחיוניות ולשלווה פנימית, ומאפשרים תנועה עדינה של רגשות ותודעה ללא מאמץ.<br>
+מחקרים מראים שצלילים ותדרים משפיעים על מבנה המים בגוף, זרימת הדם, חמצון הרקמות ויסוד מערכת העצבים האוטונומית. הצליל מאפשר לגוף לעבור ממצב של דריכות למצב של רוגע, שיקום ואיזון פנימי - גם ללא תחושה מיידית.<br>
+הקערות הטיבטיות הן כלי עתיק מההימלאיה, ששימש לריפוי, מדיטציה והעמקת תודעה במשך מאות שנים. מטרתן ליצור הרמוניה בין הגוף, הנפש והסביבה - ולא רק לטפל בסימפטומים.<br>
+החוויה עצמה היא מרחב עדין, בטוח ומדויק, שבו הגוף והנפש יכולים להירגע ולהתחבר מחדש למערכת הפנימית שלהם. הצליל הוא שפה שהגוף מבין - גם בלי אמונה או ניסיון מוקדם - וכל מה שנדרש הוא להיות נוכח ולקבל את התדרים.<br>
+סאונד הילינג יכול להוות טיפול עצמאי או חלק מתהליך אינטגרטיבי רחב יותר, מותאם אישית למצב, לחיוניות ולשלב שבו האדם נמצא, ומסייע ביצירת איזון וחיוניות עמוקים.&nbsp; &nbsp;</p>
+          
         </div>
         <div class="service-highlights">
           <div class="highlight-icon">
@@ -780,8 +810,11 @@
             </svg>
           </div>
           <div class="highlight-content">
-            <p><strong>למי זה מתאים:</strong> מתאים למתחילים ומתרגלים מנוסים כאחד. אידיאלי עבור אנשי מקצוע המחפשים כלים להתמודדות עם לחץ יומיומי ורוצים לפתח שגרת מדיטציה קבועה.</p>
-            <p><strong>מה כולל המפגש:</strong> מפגש של 75 דקות הכולל הקדמה קצרה, מדיטציה מודרכת, שיתוף חוויות בקבוצה ותרגילי נשימה. כולל חומרי לימוד דיגיטליים ומדיטציות מוקלטות לתרגול ביתי.</p>
+            <p><strong><strong>למי זה מתאים:</strong></strong><span></span></p><div class="[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn" tabindex="-1"><div class="flex max-w-full flex-col grow"><div data-message-author-role="assistant" data-message-id="a64806df-faf8-4c59-bb42-62dee0f5c638" dir="auto" class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1" data-message-model-slug="gpt-5-2"><div class="flex w-full flex-col gap-1 empty:hidden first:pt-[1px]"><div class="markdown prose dark:prose-invert w-full wrap-break-word light markdown-new-styling">הטיפול מתאים לילדים, נוער ומבוגרים, ומותאם באופן אישי למצב, לגיל ולשלב שבו האדם נמצא.<br>
+מתאים במיוחד למי שחווה עומס רגשי או גופני, מתח מתמשך, חרדה, קשיי שינה, עייפות או שחיקה, וכן למי שמרגיש צורך בהאטה, ויסות וחיבור מחודש לגוף.<br>
+הטיפול מתאים גם לאנשים רציונליים או סקפטיים, שאינם מחפשים "אמונה" אלא חוויה ישירה ועדינה, ולמי שמעדיף תהליך שאינו מבוסס על שיח.<br>
+זהו טיפול בטוח ועדין, היכול לשמש כשלב ראשוני להרגעה וייצוב, או כחלק מתהליך עומק רחב יותר - בקצב אישי ובהקשבה לגוף.</div></div></div></div></div></div>
+            <p>המפגש מתקיים במרחב שקט, בטוח ומכיל, המאפשר לגוף ולמערכת העצבים להירגע בקצב טבעי.  נתחיל בשיחה קצרה וממוקדת, שמטרתה להבין את הצורך והמצב הנוכחי, וליצור תחושת ביטחון והכוונה לתהליך. בהמשך תתקיים עבודה בצלילים בשכיבה נוחה ובלבוש מלא, באמצעות קערות טיבטיות ולעיתים גם גונג. הצלילים פועלים בעדינות ובאופן מווסת על הגוף ומערכת העצבים, ללא צורך בדיבור, מאמץ או הבנה קוגניטיבית. הקצב מותאם באופן אישי, והשליטה נשארת תמיד אצלך - ניתן לעצור או לשנות בכל שלב. בסיום המפגש ניתן זמן להתארגנות רגועה, יחד עם הנחיות עדינות להטמעה ולהמשך הקשבה לגוף. זהו תהליך מקצועי, עדין ובטוח, המאפשר ויסות, רגיעה ותמיכה בריפוי טבעי.&nbsp;&nbsp;</p>
           </div>
         </div>
       </div>
@@ -792,7 +825,7 @@
     <div class="service-block" id="service-3">
       <div class="service-content">
         <div class="service-text">
-          <h3>יוגה טיפולית פרטנית</h3>
+          <h3>לשנות</h3>
           <p>שיעורי יוגה אישיים המותאמים למבנה הגוף, הגמישות והיכולות שלך. הגישה הטיפולית משלבת אסאנות (תנוחות), פרנאיאמה (עבודת נשימה) ורילקסציה מודרכת, תוך התייחסות לכאבים או מגבלות פיזיות.</p>
           <p>השיעורים מתאימים גם למתחילים מוחלטים וגם למתרגלים מנוסים המחפשים ליווי אישי. הדגש הוא על תנועה מודעת, חיבור בין גוף לנפש, ופיתוח כוח פנימי גמיש - פיזית ומנטלית.</p>
         </div>
@@ -803,7 +836,13 @@
             </svg>
           </div>
           <div class="highlight-content">
-            <p><strong>למי זה מתאים:</strong> מתאים לכל מי שמחפש שיפור בגמישות, חיזוק השרירים והאיזון הפוסטורלי. מומלץ במיוחד לאנשים עם כאבי גב, מתח בכתפיים או רצון לשפר את המודעות הגופנית.</p>
+            <p><strong><strong>למי זה מתאים:</strong>&nbsp;&nbsp;<br>&nbsp; לכל גיל - ילדים, נוער ומבוגרים.
+<br>
+
+למי שמרגיש עומס רגשי או גופני, כאבים כרוניים או מחלות מתמשכות.
+<br>
+
+למי שמעדיף טיפול עדין, שאינו מילולי, ובלי צורך בניסיון קודם או רגישות מוזיקלית.&nbsp;&nbsp;</strong> מתאים לכל מי שמחפש שיפור בגמישות, חיזוק השרירים והאיזון הפוסטורלי. מומלץ במיוחד לאנשים עם כאבי גב, מתח בכתפיים או רצון לשפר את המודעות הגופנית.</p>
             <p><strong>מה כולל המפגש:</strong> שיעור פרטי של 60 דקות המותאם אישית, הכולל חימום עדין, תנוחות מותאמות, עבודת נשימה וסיום עם שווסאנה (הרפיה מודרכת). כולל תוכנית תרגול ביתית מותאמת אישית.</p>
           </div>
         </div>
@@ -815,7 +854,7 @@
     <div class="service-block" id="service-4">
       <div class="service-content">
         <div class="service-text">
-          <h3>סדנת איזון והתחדשות</h3>
+          <h3>לשנות</h3>
           <p>סדנה חודשית בת יום שלם המשלבת מספר שיטות ריפוי: מדיטציה, יוגה, ריפוי אנרגטי, עבודה עם קולות מרפאים (צלילי טיבטים) וטכניקות שחרור רגשי. הסדנה מעניקה חוויה מעמיקה של התחדשות פנימית והזדמנות לצאת מהשגרה.</p>
           <p>במהלך היום נעבור דרך תהליך מובנה של שחרור, ניקוי אנרגטי, חיבור פנימי וקביעת כוונות לתקופה הקרובה. הסדנה מתקיימת במרחב טבע שקט ומזמין, עם ארוחות בריאות וטבעוניות שמוגשות במהלך היום.</p>
         </div>
@@ -828,13 +867,19 @@
             </svg>
           </div>
           <div class="highlight-content">
-            <p><strong>למי זה מתאים:</strong> מתאים למי שמחפש חוויה מעמיקה של התחדשות והתמקדות עצמית. אידיאלי לאנשים בתקופות מעבר, לפני החלטות משמעותיות, או פשוט כמתנה לעצמך לצורך טעינת סוללות.</p>
+            <p><strong><strong>למי זה מתאים:</strong>&nbsp;&nbsp;<br>&nbsp; לכל גיל - ילדים, נוער ומבוגרים.
+<br>
+
+למי שמרגיש עומס רגשי או גופני, כאבים כרוניים או מחלות מתמשכות.
+<br>
+
+למי שמעדיף טיפול עדין, שאינו מילולי, ובלי צורך בניסיון קודם או רגישות מוזיקלית.&nbsp;&nbsp;</strong> מתאים למי שמחפש חוויה מעמיקה של התחדשות והתמקדות עצמית. אידיאלי לאנשים בתקופות מעבר, לפני החלטות משמעותיות, או פשוט כמתנה לעצמך לצורך טעינת סוללות.</p>
             <p><strong>מה כולל המפגש:</strong> סדנה של 8 שעות (10:00-18:00) הכוללת 3 מפגשי פרקטיקה, ארוחות בריאות, חומרים ללקיחה הביתה וקהילת תמיכה דיגיטלית. מספר המשתתפים מוגבל ל-12 איש לחוויה אינטימית.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  
 </section>
 
 <section class="services-process-section" data-layout-spec="Services-process">
@@ -900,7 +945,7 @@
 </section>
   </main>
   
-  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo" /><p class="footer-description">מרכז לבריאות ורווחה המציע שירותים מקצועיים ומסורים לשיפור איכות החיים והבריאות הכללית שלך.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:[business_email]">[business_email]</a></li><li><i class="fas fa-phone"></i><a href="tel:[business_phone]">[business_phone]</a></li><li><a href="/about"><i class="fas fa-map-marker-alt"></i><span>[business_address]</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><div class="footer-copyright"><p>© 2026 אילנית שייט שרון. כל הזכויות שמורות.</p></div><div class="footer-attribution"><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
+  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo"><p class="footer-description">מרכז לבריאות ורווחה המציע שירותים מקצועיים ומסורים לשיפור איכות החיים והבריאות הכללית שלך.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:ilanitsharon@gmail.com">ilanitsharon@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:054-6650530">054-6650530</a></li><li><a href="/about"><i class="fas fa-map-marker-alt"></i><span>מירון 15 קדימה, קדימה, Israel</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><div class="footer-copyright"><p>© 2026 אילנית שייט שרון. כל הזכויות שמורות.</p></div><div class="footer-attribution"><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
   
   <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -1017,6 +1062,76 @@
           observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
         });
       }, 500);
+    })();
+    </script>
+
+    <script id="zappy-mobile-lang-menu-script">
+    (function() {
+      function initMobileLangMenu() {
+        if (window.innerWidth > 768) {
+          var existingMenu = document.querySelector('.mobile-lang-menu');
+          if (existingMenu) existingMenu.remove();
+          return;
+        }
+        if (document.querySelector('.mobile-lang-menu')) return;
+        var switcher = document.querySelector('.lang-switcher');
+        if (!switcher) return;
+        var dropdown = switcher.querySelector('.lang-switcher-dropdown');
+        if (!dropdown) return;
+        var options = dropdown.querySelectorAll('.lang-option');
+        if (options.length === 0) return;
+        var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('nav ul');
+        if (!navMenu) return;
+        var currentLang = document.documentElement.lang || 'en';
+        var langConfigs = {
+          he: {name:'עברית',flag:'https://api.iconify.design/circle-flags/il.svg'},
+          en: {name:'English',flag:'https://api.iconify.design/circle-flags/us.svg'},
+          ar: {name:'العربية',flag:'https://api.iconify.design/circle-flags/sa.svg'},
+          fr: {name:'Français',flag:'https://api.iconify.design/circle-flags/fr.svg'},
+          es: {name:'Español',flag:'https://api.iconify.design/circle-flags/es.svg'},
+          de: {name:'Deutsch',flag:'https://api.iconify.design/circle-flags/de.svg'},
+          ru: {name:'Русский',flag:'https://api.iconify.design/circle-flags/ru.svg'},
+          zh: {name:'中文',flag:'https://api.iconify.design/circle-flags/cn.svg'},
+          ja: {name:'日本語',flag:'https://api.iconify.design/circle-flags/jp.svg'},
+          pt: {name:'Português',flag:'https://api.iconify.design/circle-flags/br.svg'},
+          it: {name:'Italiano',flag:'https://api.iconify.design/circle-flags/it.svg'},
+          ko: {name:'한국어',flag:'https://api.iconify.design/circle-flags/kr.svg'}
+        };
+        var container = document.createElement('div');
+        container.className = 'mobile-lang-menu';
+        var currentConfig = langConfigs[currentLang] || {name:currentLang,flag:''};
+        var toggleBtn = document.createElement('button');
+        toggleBtn.className = 'mobile-lang-toggle';
+        toggleBtn.type = 'button';
+        var currentFlagHtml = currentConfig.flag ? '<img src="' + currentConfig.flag + '" width="20" height="20" alt="" style="border-radius:50%;margin-right:8px;margin-left:8px;">' : '';
+        toggleBtn.innerHTML = currentFlagHtml + currentConfig.name;
+        container.appendChild(toggleBtn);
+        var optionsDiv = document.createElement('div');
+        optionsDiv.className = 'mobile-lang-options';
+        var currentLink = document.createElement('a');
+        currentLink.className = 'mobile-lang-option active';
+        currentLink.href = '#';
+        currentLink.innerHTML = currentFlagHtml + currentConfig.name;
+        optionsDiv.appendChild(currentLink);
+        options.forEach(function(opt) {
+          var link = document.createElement('a');
+          link.className = 'mobile-lang-option';
+          link.href = opt.getAttribute('href');
+          link.innerHTML = opt.innerHTML;
+          optionsDiv.appendChild(link);
+        });
+        container.appendChild(optionsDiv);
+        navMenu.appendChild(container);
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleBtn.classList.toggle('expanded');
+          optionsDiv.classList.toggle('expanded');
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileLangMenu); }
+      else { initMobileLangMenu(); }
+      window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
     })();
     </script>
 </body></html>

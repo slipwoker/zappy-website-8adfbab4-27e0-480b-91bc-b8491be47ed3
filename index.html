@@ -73,10 +73,541 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.home-Hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1px;
+}
+
+.home-Hero-section .hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+  z-index: 0;
+  display: block;
+}
+
+.home-Hero-section .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(30, 42, 58, 0.9) 0%, rgba(30, 42, 58, 0.75) 35%, rgba(30, 42, 58, 0.55) 55%, rgba(30, 42, 58, 0.25) 75%, rgba(30, 42, 58, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-Hero-section .hero-content-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-Hero-section .hero-content {
+  max-width: 640px;
+  width: 100%;
+  text-align: start;
+  color: var(--text-light);
+}
+
+.home-Hero-section h1 {
+  font-family: 'David Libre', 'Libre Baskerville', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--text-light);
+  margin: 0 0 24px 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.home-Hero-section h3 {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0 0 32px 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.home-Hero-section .hero-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-Hero-section .btn-primary {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--text-light);
+  padding: 14px 36px;
+  border-radius: 0px;
+  border: 1px solid var(--secondary);
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home-Hero-section .btn-primary:hover {
+  background: #5a9d9e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-Hero-section .btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-light);
+  padding: 14px 36px;
+  border-radius: 0px;
+  border: 1px solid var(--text-light);
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home-Hero-section .btn-secondary:hover {
+  background: rgba(251, 250, 247, 0.1);
+  border-color: rgba(251, 250, 247, 0.9);
+  transform: translateY(-2px);
+}
+
+.home-Hero-section .hero-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--border-light);
+  opacity: 0.25;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .home-Hero-section {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .home-Hero-section .hero-background-image {
+    object-position: center center;
+  }
+
+  .home-Hero-section .hero-overlay {
+    background: linear-gradient(180deg, rgba(30, 42, 58, 0.85) 0%, rgba(30, 42, 58, 0.75) 50%, rgba(30, 42, 58, 0.65) 100%);
+  }
+
+  .home-Hero-section .hero-content-wrapper {
+    padding: 0 16px;
+    min-height: auto;
+  }
+
+  .home-Hero-section .hero-content {
+    max-width: 100%;
+  }
+
+  .home-Hero-section h1 {
+    font-size: 2.25rem;
+    margin-bottom: 16px;
+  }
+
+  .home-Hero-section h3 {
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+  }
+
+  .home-Hero-section .hero-cta-row {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .home-Hero-section .btn-primary,
+  .home-Hero-section .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+  }
+}
+</style>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.home-about-section {
+  position: relative;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 80px 0 80px 0;
+  overflow: visible;
+}
+
+.home-about-overlap-band {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: #EDEAE3;
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1;
+}
+
+.home-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.home-about-imagery {
+  position: relative;
+}
+
+.home-about-main-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.home-about-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 0 rgba(31, 41, 55, 0.10);
+}
+
+.home-about-detail-tile {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  width: 140px;
+  height: 140px;
+  z-index: 3;
+}
+
+.home-about-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14);
+}
+
+.home-about-content {
+  padding-top: 8px;
+}
+
+.home-about-title {
+  font-family: 'David Libre', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0 0 28px 0;
+  letter-spacing: 0.01em;
+}
+
+.home-about-paragraph {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin: 0 0 20px 0;
+}
+
+.home-about-values {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-about-value-item {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin: 0;
+  padding-inline-start: 24px;
+  position: relative;
+}
+
+.home-about-value-item::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .home-about-section {
+    padding: 100px 0 60px 0;
+  }
+
+  .home-about-overlap-band {
+    height: 20px;
+    top: -10px;
+  }
+
+  .home-about-container {
+    padding: 0 16px;
+  }
+
+  .home-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-about-imagery {
+    order: 1;
+  }
+
+  .home-about-content {
+    order: 2;
+    padding-top: 0;
+  }
+
+  .home-about-main-image-wrapper {
+    max-width: 100%;
+  }
+
+  .home-about-detail-tile {
+    width: 100px;
+    height: 100px;
+    bottom: -12px;
+    left: -12px;
+  }
+
+  .home-about-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .home-about-paragraph {
+    font-size: 0.9375rem;
+    margin-bottom: 16px;
+  }
+
+  .home-about-values {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .home-about-value-item {
+    font-size: 0.9375rem;
+    padding-inline-start: 20px;
+  }
+
+  .home-about-value-item::before {
+    top: 6px;
+    width: 5px;
+    height: 5px;
+  }
+}
+</style>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.home-testimonials-section {
+  position: relative;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 80px 16px 80px 16px;
+  overflow: visible;
+}
+
+.home-testimonials-divider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.home-testimonials-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.home-testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.home-testimonials-header {
+  margin-bottom: 48px;
+  text-align: start;
+}
+
+.home-testimonials-header h2 {
+  font-family: 'David Libre', 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.home-testimonials-intro {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--text-light);
+  max-width: 700px;
+  opacity: 0.9;
+}
+
+.home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home-testimonials-card {
+  background: transparent;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 200px;
+}
+
+.home-testimonials-quote {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-light);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.home-testimonials-author {
+  font-family: 'Assistant', 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0;
+  opacity: 0.85;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-dark);
+}
+
+@media (max-width: 768px) {
+  .home-testimonials-section {
+    padding: 100px 16px 60px 16px;
+  }
+
+  .home-testimonials-header h2 {
+    font-size: 2rem;
+  }
+
+  .home-testimonials-intro {
+    font-size: 0.9375rem;
+  }
+
+  .home-testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .home-testimonials-card {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .home-testimonials-quote {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-testimonials-card:last-child {
+    grid-column: span 2;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+/* ZAPPY_POSTGEN_GUARD_TOP_DIVIDER_REMOVAL:Home-testimonials (home-testimonials) — repositioned top divider to overlap previous section boundary */
+[data-layout-spec="Home-testimonials"] .home-testimonials-divider-wrapper {
+  transform: translateY(-100%) !important;
+}
+[data-layout-spec="Home-testimonials"].home-testimonials-section,
+[data-layout-spec="Home-testimonials"] .home-testimonials-section {
+  padding-top: 60px !important;
+}
+
+</style>
 <!-- Zappy Analytics -->
 <script>
 (function() {
@@ -321,6 +852,31 @@
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
+
+    <style id="mobile-lang-menu-deployed-css">
+    @media (max-width: 768px) {
+      .lang-switcher,
+      .nav-cta-container .lang-switcher,
+      .nav-container .lang-switcher,
+      .navbar .lang-switcher,
+      .navbar .nav-cta-container .lang-switcher,
+      .nav-icons-left .lang-switcher,
+      .nav-ecommerce-icons .lang-switcher { display: none !important; }
+      .mobile-lang-menu { width: 100%; border-top: 1px solid rgba(128,128,128,0.2); padding: 8px 0 0 0; margin-top: 8px; }
+      .mobile-lang-toggle { display: flex !important; align-items: center; justify-content: space-between; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; font-size: 15px; color: inherit; font-family: inherit; }
+      .mobile-lang-toggle::after { content: ''; display: inline-block; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.3s ease; margin-left: 8px; }
+      .mobile-lang-toggle.expanded::after { transform: rotate(-135deg); }
+      .mobile-lang-options { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .mobile-lang-options.expanded { max-height: 300px; }
+      .mobile-lang-option { display: flex !important; align-items: center; gap: 10px; padding: 10px 24px; text-decoration: none; color: inherit; font-size: 14px; font-family: inherit; }
+      .mobile-lang-option:hover { background: rgba(128,128,128,0.1); }
+      .mobile-lang-option.active { font-weight: 600; opacity: 0.7; pointer-events: none; }
+      .mobile-lang-option img { width: 20px; height: 20px; border-radius: 50%; }
+    }
+    @media (min-width: 769px) {
+      .mobile-lang-menu { display: none !important; }
+    }
+    </style>
 </head>
 <body>
 
@@ -328,7 +884,7 @@
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
   <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
 </div>
-  <nav class="navbar" dir="rtl"><button class="mobile-toggle" id="mobileToggle" aria-label="תפריט"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="התקשר"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo" /></a></div><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li></ul></div><div class="nav-cta-container"><a href="/contact" class="nav-cta-btn">צור קשר</a></div></div></nav>
+  <nav class="navbar" dir="rtl"><button class="mobile-toggle" id="mobileToggle" aria-label="תפריט"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="התקשר"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo"></a></div><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li></ul></div><div class="nav-cta-container"><a href="/contact" class="nav-cta-btn">צור קשר</a></div></div></nav>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
@@ -673,7 +1229,7 @@
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
-          : '[business_phone]';
+          : '054-6650530';
         
         window.location.href = 'tel:' + phoneNumber;
         console.log('[Navbar] Phone button clicked');
@@ -721,33 +1277,26 @@
 
   
   <main>
-    <section class="home-hero-section" data-layout-spec="Home-Hero">
-  <div class="hero-container">
+    <section class="home-Hero-section" data-layout-spec="Home-Hero" data-hero-type="fullscreen-scrim">
+  <img data-context="Professional wellness clinic environment in Israel: bright, naturally-lit consultation room with soft shadows, neutral ivory and cream tones, clean modern furniture, subtle health-related elements like plants or wellness materials, warm and inviting atmosphere that conveys trust and professionalism for mental health and wellbeing services" width="1920" height="1080" src="/assets/section-Home-Hero-home-Hero-image-1.webp" alt="חדר ייעוץ מקצועי ומזמין לשירותי בריאות ורווחה" class="hero-background-image" data-zappy-editable-image="true">
+  <div class="hero-overlay"></div>
+  <div class="hero-content-wrapper">
     <div class="hero-content">
-      <h1 class="hero-title">מרחב ריפוי ואיזון שרון – תמיכה מקצועית לבריאות ורווחה</h1>
-      <p class="hero-description">גישה מבוססת מחקר ותובנות מעמיקות, המציעה מרחב בטוח ודיסקרטי לליווי אישי בתהליכי שינוי, התמודדות ופיתוח אישי. כאן תמצאו הקשבה אמפתית, כלים מעשיים ותמיכה מקצועית המותאמת לצרכים שלכם.</p>
-      <a href="/contact" class="hero-cta btn-primary">יצירת קשר לייעוץ ראשוני</a>
-      <div class="trust-cues">
-        <span class="trust-item">ניסיון מוכח בתחום</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">גישה מבוססת מחקר</span>
-        <span class="trust-divider"></span>
-        <span class="trust-item">סביבה תומכת ודיסקרטית</span>
-      </div>
-    </div>
-    <div class="hero-imagery">
-      <div class="image-wrapper">
-        <div class="decorative-backplate"></div>
-        <img data-placeholder="home-hero-portrait" data-context="Professional health and wellness practitioner in a bright, modern clinic setting. Natural daylight streaming through windows, soft shadows, neutral warm tones. Person appears calm, approachable, and professional, wearing simple elegant attire. Background shows clean minimalist therapy/consultation room with plants and natural materials. Portrait orientation, waist-up or full-body shot. Conveys trust, expertise, and warmth." width="600" height="800" src="/assets/site-home-image-1.webp" alt="אילנית שייט שרון - מטפלת מקצועית בבריאות ורווחה">
+      <h1>אילנית שייט שרון</h1>
+      <h3>מרחב ריפוי ואיזון לגוף, לנפש ולתודעה - מתוך אהבה, הקשבה ודיוק</h3>
+      <div class="hero-cta-row">
+        <a href="/contact" class="btn-primary">פנו לייעוץ אישי</a>
+        <a href="#about" class="btn-secondary">למידע נוסף</a>
       </div>
     </div>
   </div>
+  <div class="hero-divider"></div>
 </section>
 
-<section class="home-services-section" data-layout-spec="Home-services">
+<section class="home-services-section" data-layout-spec="Home-services" id="zappy-section-1">
   <!-- Diagonal SVG Divider -->
-  <div class="divider-wrapper">
-    <svg class="diagonal-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" preserveAspectRatio="none">
+  <div class="divider-wrapper" data-zappy-top-divider-fix="true">
+    <svg class="diagonal-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
       <line x1="0" y1="0" x2="1200" y2="40" stroke="var(--border-light)" stroke-width="1.5"></line>
       <circle cx="1200" cy="40" r="3" fill="var(--secondary)" opacity="0.6"></circle>
     </svg>
@@ -759,11 +1308,11 @@
       <p class="intro-text">מגוון שירותי ריפוי הוליסטי ואיזון אנרגטי המותאמים אישית לצרכיך. כל טיפול מעניק חוויה מעמיקה של ריפוי פנימי והתחדשות.</p>
     </div>
 
-    <div class="services-grid">
+    <div class="services-grid zappy-preserve-css-grid" data-original-item-width="282" data-original-gap="24px" style="grid-template-columns: 282px 282px 282px 282px;">
       <!-- Service Card 1 -->
-      <article class="service-card">
+      <article class="service-card" data-grid-item-index="0">
         <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-element-type="icon" data-element-id="icon-1770993543146-8qlv7up8f" data-icon-type="svg">
             <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
             <path d="M2 17l10 5 10-5"></path>
             <path d="M2 12l10 5 10-5"></path>
@@ -775,9 +1324,9 @@
       </article>
 
       <!-- Service Card 2 -->
-      <article class="service-card">
+      <article class="service-card" data-grid-item-index="1">
         <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-element-type="icon" data-element-id="icon-1770993543146-m35fnc7h6" data-icon-type="svg">
             <circle cx="12" cy="12" r="3"></circle>
             <path d="M12 1v6m0 6v6"></path>
             <path d="M1 12h6m6 0h6"></path>
@@ -791,9 +1340,9 @@
       </article>
 
       <!-- Service Card 3 -->
-      <article class="service-card">
+      <article class="service-card" data-grid-item-index="2">
         <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-element-type="icon" data-element-id="icon-1770993543146-5eyjvs064" data-icon-type="svg">
             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
             <path d="M12 16v-4"></path>
             <circle cx="12" cy="8" r="0.5" fill="currentColor"></circle>
@@ -805,52 +1354,40 @@
       </article>
 
       <!-- Service Card 4 -->
-      <article class="service-card">
+      <article class="service-card" data-grid-item-index="3">
         <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-element-type="icon" data-element-id="icon-1770993543146-ofk2owfry" data-icon-type="svg">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
           </svg>
         </div>
         <h3>ייעוץ הוליסטי</h3>
         <p>ליווי אישי בתהליכי שינוי והתפתחות אישית, המשלב כלים מגוונים להשגת איזון ורווחה מלאה.</p>
-        <a href="/services#service-4" class="service-link">למידע נוסף <span class="arrow">←</span></a>
+        <a href="/services" class="service-link btn btn-ghost" data-native-element="true" data-element-id="btn-1770993718029-whe288y3v" data-element-type="button" style="outline: none; color: rgb(76, 138, 139) !important; border-color: transparent !important; background-color: transparent !important; background-image: none !important;">למידע נוסף <span class="arrow">←</span></a>
       </article>
     </div>
   </div>
 </section>
 
 <section class="home-about-section" data-layout-spec="Home-about">
-  <!-- Overlap band -->
-  <div class="overlap-band"></div>
-  
-  <div class="about-container">
-    <div class="about-grid">
-      <!-- Imagery Column -->
-      <div class="imagery-column">
-        <div class="main-image-wrapper">
-          <img data-placeholder="home-about-clinic-interior" data-context="Bright, calming wellness clinic interior in Israel - natural light streaming through windows, cream and beige tones, comfortable treatment room with plants, minimalist professional health and wellness space, warm inviting atmosphere" width="600" height="800" src="/assets/site-home-image-2.webp" alt="חלל הטיפולים המזמין של אילנית שייט שרון" class="main-image">
-          
-          <!-- Small detail tile -->
-          <div class="detail-tile-wrapper">
-            <img data-placeholder="home-about-detail-tile" data-context="Close-up detail shot of wellness elements - green plant in ceramic pot next to natural candle on wooden surface, soft natural light, calming wellness atmosphere, beige and green tones" width="200" height="200" src="/assets/site-home-image-3.webp" alt="פרט מרגיע מהמרפאה" class="detail-tile">
+  <div class="home-about-overlap-band"></div>
+  <div class="home-about-container">
+    <div class="home-about-grid">
+      <div class="home-about-imagery">
+        <div class="home-about-main-image-wrapper">
+          <img data-context="Bright, welcoming health and wellness clinic interior in Israel - modern treatment room with natural light streaming through large windows, clean white walls, comfortable seating, green plants, soft neutral tones, professional yet warm atmosphere, suitable for health and wellness practice" width="600" height="800" src="/assets/section-Home-about-home-about-clinic-interior.webp" alt="פנים מרפאת אילנית שייט שרון - חלל טיפולים מואר ומזמין" class="home-about-main-image" data-zappy-editable-image="true">
+          <div class="home-about-detail-tile">
+            <img data-context="Close-up detail shot of wellness clinic decor - elegant potted plant or aromatic candle on natural wood surface, soft focus, warm neutral tones, calming aesthetic, minimalist composition" width="280" height="280" src="/assets/section-Home-about-home-about-detail-plant.webp" alt="פרט עיצובי - צמח או נר ריחני במרפאה" class="home-about-detail-image" data-zappy-editable-image="true">
           </div>
         </div>
       </div>
-      
-      <!-- Content Column -->
-      <div class="content-column">
-        <h2 class="about-heading">מרחב ריפוי ואיזון שרון</h2>
-        
-        <p class="about-paragraph">במרפאה שלי אני מאמינה שכל אדם נושא בתוכו את הכוח לריפוי ולשינוי. התפקיד שלי הוא ללוות אותך במסע הזה, ליצור מרחב בטוח ומזמין שבו תוכל להתחבר לעצמך מחדש. כל מפגש מותאם אישית, משלב טכניקות מגוונות מעולם הריפוי ההוליסטי, ומכבד את הקצב והצרכים הייחודיים שלך.</p>
-        
-        <p class="about-paragraph">הגישה שלי מבוססת על הקשבה עמוקה, נוכחות אמיתית ושילוב של כלים טיפוליים שהוכיחו את עצמם. אני רואה בכל אדם שלמות, ועובדת מתוך אמונה שהגוף והנפש יודעים את דרכם לאיזון כשניתן להם את התמיכה והתנאים המתאימים.</p>
-        
-        <div class="values-list">
-          <p class="value-item"><strong>בהירות רגועה</strong> – גישה שקטה ומכוונת שמאפשרת לך לראות את המצב שלך בבהירות חדשה</p>
-          
-          <p class="value-item"><strong>תוכנית אישית</strong> – כל טיפול מותאם במדויק לצרכים, למטרות ולמקום שבו אתה נמצא עכשיו</p>
-          
-          <p class="value-item"><strong>תמיכה מתמשכת</strong> – ליווי קשוב לאורך כל הדרך, עם כלים מעשיים שילוו אותך גם מחוץ לחדר הטיפולים</p>
+      <div class="home-about-content">
+        <h2 class="home-about-title">על אילנית ועל המרפאה</h2>
+        <p class="home-about-paragraph">אילנית שייט שרון מביאה ניסיון רב שנים בתחום הבריאות והרווחה, עם גישה מקצועית ואישית לכל מטופל. המרפאה מציעה סביבה שקטה ומרגיעה, שבה ניתן להרגיש בנוח ובביטחון. כל טיפול מותאם באופן אישי, תוך הקשבה עמוקה לצרכים הייחודיים של כל אדם ואדם.</p>
+        <p class="home-about-paragraph">הפילוסופיה שלנו מבוססת על חיבור בין גוף ונפש, ועל הבנה כי בריאות אמיתית מגיעה מאיזון ומתוך טיפול הוליסטי. החוויה כאן היא של שקט, של תשומת לב אמיתית, ושל תחושה שמישהו באמת דואג לרווחה שלך.</p>
+        <div class="home-about-values">
+          <p class="home-about-value-item">שקט וצלילות – סביבה מרגיעה שמאפשרת להתמקד במה שחשוב באמת</p>
+          <p class="home-about-value-item">תוכנית מותאמת אישית – כל טיפול נבנה במיוחד עבורך, בהתאם למצבך הייחודי</p>
+          <p class="home-about-value-item">תמיכה מתמשכת – ליווי צמוד לאורך כל הדרך, גם מעבר לטיפול עצמו</p>
         </div>
       </div>
     </div>
@@ -858,33 +1395,32 @@
 </section>
 
 <section class="home-testimonials-section" data-layout-spec="Home-testimonials">
-  <!-- Wave Divider -->
-  <div class="wave-divider-wrapper">
-    <svg class="wave-divider" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,60 Q360,20 720,60 T1440,60 L1440,0 L0,0 Z" fill="var(--bg-dark)"></path>
+  <div class="home-testimonials-divider-wrapper">
+    <svg aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 L0,50 Q150,35 300,45 T600,30 Q750,40 900,45 T1200,50 L1200,80 Z" fill="var(--bg-dark)"></path>
     </svg>
   </div>
-
-  <div class="testimonials-container">
-    <div class="testimonials-header">
-      <h2>מה הלקוחות שלנו אומרים</h2>
-      <p class="intro-text">חוויות אמיתיות של אנשים שמצאו דרכם למרחב של ריפוי ואיזון</p>
+  
+  <div class="home-testimonials-container">
+    <div class="home-testimonials-header">
+      <h2>מה הלקוחות אומרים</h2>
+      <p class="home-testimonials-intro">חוויות אמיתיות של אנשים שבחרו בליווי מקצועי לשיפור הבריאות והרווחה האישית</p>
     </div>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"הגעתי לאילנית בתקופה מאתגרת בחיי. היא הצליחה להעניק לי תחושת ביטחון ותמיכה שלא הרגשתי כבר זמן רב. הטיפולים שלה מקצועיים, עדינים ומותאמים אישית. אני מרגישה שיש לי כלים להתמודד עם היומיום בצורה הרבה יותר בריאה."</p>
-        <p class="testimonial-author">ר.כ., תל אביב</p>
+    <div class="home-testimonials-grid">
+      <div class="home-testimonials-card">
+        <p class="home-testimonials-quote">"הליווי המקצועי שקיבלתי היה מדויק בדיוק למה שהייתי צריכה. הרגשתי שמקשיבים לי באמת ושהתהליך מותאם אישית לצרכים שלי. היום אני מרגישה הרבה יותר בטוחה ומאוזנת."</p>
+        <p class="home-testimonials-author">ר.מ.</p>
       </div>
 
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"המקצועיות והחום שאילנית מביאה לכל מפגש יצרו עבורי מרחב בטוח לצמיחה אישית. היא הצליחה להעניק לי בהירות בנושאים שהיו מעורפלים במשך שנים. הגישה ההוליסטית שלה באמת עובדת - אני מרגיש יותר מאוזן ומחובר לעצמי."</p>
-        <p class="testimonial-author">ד.ש., נתניה</p>
+      <div class="home-testimonials-card">
+        <p class="home-testimonials-quote">"המקצועיות והבהירות בתקשורת עזרו לי להבין את התהליך ולהרגיש בנוח לאורך כל הדרך. קיבלתי כלים מעשיים שעוזרים לי להתמודד טוב יותר עם האתגרים היומיומיים."</p>
+        <p class="home-testimonials-author">ד.ל.</p>
       </div>
 
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"אחרי חודשים של חיפוש, מצאתי באילנית את המטפלת המושלמת עבורי. היא משלבת ידע מקצועי עמוק עם אמפתיה אמיתית. כל פגישה היא חוויה של ריפוי - גופני, רגשי ונפשי. אני ממליצה עליה בחום לכל מי שמחפש שינוי אמיתי."</p>
-        <p class="testimonial-author">מ.ל., הרצליה</p>
+      <div class="home-testimonials-card">
+        <p class="home-testimonials-quote">"הגישה האמפתית והמקצועית יחד יצרו חוויה מיוחדת. הרגשתי נתמכת בכל שלב, וההבנה העמוקה של הצרכים שלי הובילה לשינוי משמעותי באיכות החיים."</p>
+        <p class="home-testimonials-author">י.ש.</p>
       </div>
     </div>
   </div>
@@ -975,7 +1511,7 @@
 </section>
   </main>
   
-  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo" /><p class="footer-description">מרכז לבריאות ורווחה המציע שירותים מקצועיים ומסורים לשיפור איכות החיים והבריאות הכללית שלך.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:[business_email]">[business_email]</a></li><li><i class="fas fa-phone"></i><a href="tel:[business_phone]">[business_phone]</a></li><li><a href="/about"><i class="fas fa-map-marker-alt"></i><span>[business_address]</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><div class="footer-copyright"><p>© 2026 אילנית שייט שרון. כל הזכויות שמורות.</p></div><div class="footer-attribution"><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
+  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo"><p class="footer-description">מרכז לבריאות ורווחה המציע שירותים מקצועיים ומסורים לשיפור איכות החיים והבריאות הכללית שלך.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:ilanitsharon@gmail.com">ilanitsharon@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:054-6650530">054-6650530</a></li><li><a href="/about"><i class="fas fa-map-marker-alt"></i><span>מירון 15 קדימה, קדימה, Israel</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><div class="footer-copyright"><p>© 2026 אילנית שייט שרון. כל הזכויות שמורות.</p></div><div class="footer-attribution"><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
   
   <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -1092,6 +1628,76 @@
           observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
         });
       }, 500);
+    })();
+    </script>
+
+    <script id="zappy-mobile-lang-menu-script">
+    (function() {
+      function initMobileLangMenu() {
+        if (window.innerWidth > 768) {
+          var existingMenu = document.querySelector('.mobile-lang-menu');
+          if (existingMenu) existingMenu.remove();
+          return;
+        }
+        if (document.querySelector('.mobile-lang-menu')) return;
+        var switcher = document.querySelector('.lang-switcher');
+        if (!switcher) return;
+        var dropdown = switcher.querySelector('.lang-switcher-dropdown');
+        if (!dropdown) return;
+        var options = dropdown.querySelectorAll('.lang-option');
+        if (options.length === 0) return;
+        var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('nav ul');
+        if (!navMenu) return;
+        var currentLang = document.documentElement.lang || 'en';
+        var langConfigs = {
+          he: {name:'עברית',flag:'https://api.iconify.design/circle-flags/il.svg'},
+          en: {name:'English',flag:'https://api.iconify.design/circle-flags/us.svg'},
+          ar: {name:'العربية',flag:'https://api.iconify.design/circle-flags/sa.svg'},
+          fr: {name:'Français',flag:'https://api.iconify.design/circle-flags/fr.svg'},
+          es: {name:'Español',flag:'https://api.iconify.design/circle-flags/es.svg'},
+          de: {name:'Deutsch',flag:'https://api.iconify.design/circle-flags/de.svg'},
+          ru: {name:'Русский',flag:'https://api.iconify.design/circle-flags/ru.svg'},
+          zh: {name:'中文',flag:'https://api.iconify.design/circle-flags/cn.svg'},
+          ja: {name:'日本語',flag:'https://api.iconify.design/circle-flags/jp.svg'},
+          pt: {name:'Português',flag:'https://api.iconify.design/circle-flags/br.svg'},
+          it: {name:'Italiano',flag:'https://api.iconify.design/circle-flags/it.svg'},
+          ko: {name:'한국어',flag:'https://api.iconify.design/circle-flags/kr.svg'}
+        };
+        var container = document.createElement('div');
+        container.className = 'mobile-lang-menu';
+        var currentConfig = langConfigs[currentLang] || {name:currentLang,flag:''};
+        var toggleBtn = document.createElement('button');
+        toggleBtn.className = 'mobile-lang-toggle';
+        toggleBtn.type = 'button';
+        var currentFlagHtml = currentConfig.flag ? '<img src="' + currentConfig.flag + '" width="20" height="20" alt="" style="border-radius:50%;margin-right:8px;margin-left:8px;">' : '';
+        toggleBtn.innerHTML = currentFlagHtml + currentConfig.name;
+        container.appendChild(toggleBtn);
+        var optionsDiv = document.createElement('div');
+        optionsDiv.className = 'mobile-lang-options';
+        var currentLink = document.createElement('a');
+        currentLink.className = 'mobile-lang-option active';
+        currentLink.href = '#';
+        currentLink.innerHTML = currentFlagHtml + currentConfig.name;
+        optionsDiv.appendChild(currentLink);
+        options.forEach(function(opt) {
+          var link = document.createElement('a');
+          link.className = 'mobile-lang-option';
+          link.href = opt.getAttribute('href');
+          link.innerHTML = opt.innerHTML;
+          optionsDiv.appendChild(link);
+        });
+        container.appendChild(optionsDiv);
+        navMenu.appendChild(container);
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleBtn.classList.toggle('expanded');
+          optionsDiv.classList.toggle('expanded');
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileLangMenu); }
+      else { initMobileLangMenu(); }
+      window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
     })();
     </script>
 </body></html>

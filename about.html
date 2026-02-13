@@ -73,7 +73,7 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
@@ -321,6 +321,31 @@
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
+
+    <style id="mobile-lang-menu-deployed-css">
+    @media (max-width: 768px) {
+      .lang-switcher,
+      .nav-cta-container .lang-switcher,
+      .nav-container .lang-switcher,
+      .navbar .lang-switcher,
+      .navbar .nav-cta-container .lang-switcher,
+      .nav-icons-left .lang-switcher,
+      .nav-ecommerce-icons .lang-switcher { display: none !important; }
+      .mobile-lang-menu { width: 100%; border-top: 1px solid rgba(128,128,128,0.2); padding: 8px 0 0 0; margin-top: 8px; }
+      .mobile-lang-toggle { display: flex !important; align-items: center; justify-content: space-between; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; font-size: 15px; color: inherit; font-family: inherit; }
+      .mobile-lang-toggle::after { content: ''; display: inline-block; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.3s ease; margin-left: 8px; }
+      .mobile-lang-toggle.expanded::after { transform: rotate(-135deg); }
+      .mobile-lang-options { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .mobile-lang-options.expanded { max-height: 300px; }
+      .mobile-lang-option { display: flex !important; align-items: center; gap: 10px; padding: 10px 24px; text-decoration: none; color: inherit; font-size: 14px; font-family: inherit; }
+      .mobile-lang-option:hover { background: rgba(128,128,128,0.1); }
+      .mobile-lang-option.active { font-weight: 600; opacity: 0.7; pointer-events: none; }
+      .mobile-lang-option img { width: 20px; height: 20px; border-radius: 50%; }
+    }
+    @media (min-width: 769px) {
+      .mobile-lang-menu { display: none !important; }
+    }
+    </style>
 </head>
 <body>
 
@@ -328,7 +353,7 @@
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
   <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
 </div>
-  <nav class="navbar" dir="rtl"><button class="mobile-toggle" id="mobileToggle" aria-label="תפריט"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="התקשר"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo" /></a></div><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li></ul></div><div class="nav-cta-container"><a href="/contact" class="nav-cta-btn">צור קשר</a></div></div></nav>
+  <nav class="navbar" dir="rtl"><button class="mobile-toggle" id="mobileToggle" aria-label="תפריט"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="התקשר"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo"></a></div><ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li></ul></div><div class="nav-cta-container"><a href="/contact" class="nav-cta-btn">צור קשר</a></div></div></nav>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
@@ -673,7 +698,7 @@
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
-          : '[business_phone]';
+          : '054-6650530';
         
         window.location.href = 'tel:' + phoneNumber;
         console.log('[Navbar] Phone button clicked');
@@ -730,13 +755,13 @@
   </div>
 </section>
 
-<section class="about-profile-section" data-layout-spec="About-profile">
+<section class="about-profile-section" data-layout-spec="About-profile" id="temp-section-1770652182770-1770652302533-zc6nzv87h">
   <div class="profile-container">
     <div class="profile-content">
-      <h2>האדם מאחורי הטיפול</h2>
-      <p>אילנית שייט שרון מביאה עימה למעלה מעשור של ניסיון בתחום הבריאות ההוליסטית והרווחה האישית. המסע שלה החל כחיפוש אישי אחר איזון ושלווה, והוביל אותה ללימודים מעמיקים בטכניקות ריפוי מגוונות, מדיטציה ויוגה טיפולית. כיום, היא מלווה אנשים במסע שלהם לבריאות מלאה, תוך שילב חכמה עתיקה עם גישות מודרניות המותאמות לצרכים של כל אדם.</p>
-      <p>העקרונות המנחים את עבודתה של אילנית מושתתים על אמונה עמוקה ביכולת הריפוי הטבעית של הגוף והנפש. היא רואה בכל אדם ישות שלמה, שבה הגוף, הנפש והרוח קשורים זה בזה באופן בלתי נפרד. הגישה שלה מדגישה הקשבה אמפתית, כבוד לתהליך האישי של כל מטופל, ויצירת מרחב בטוח ומזמין לצמיחה ושינוי. אילנית מאמינה שריפוי אמיתי מתרחש כאשר אנו מחברים מחדש עם עצמנו ומאזנים את האנרגיות הפנימיות שלנו.</p>
-      <p>מפגש עם אילנית הוא חוויה של נוכחות מלאה ותשומת לב מסורה. המטופלים מתארים את הסשנים כמרחב של רוגע, הקשבה עמוקה וחמלה אמיתית. אילנית משלבת טכניקות ריפוי אנרגטי, מדיטציה מודרכת ועבודה גופנית עדינה, כל זאת בהתאמה אישית לצרכים ולמטרות של כל אדם. המטרה היא לא רק להקל על תסמינים, אלא ליצור שינוי עמוק ומתמשך שמאפשר חיים מאוזנים, בריאים ומלאי משמעות.</p>
+      <h2>מי אני</h2>
+      <p>שמי אילנית שייט שרון,<br>מטפלת מוסמכת ברפואה אינטגרטיבית מאחדת של ד״ר נאדר בוטו.<br>אני מטפלת בשטיפה אנרגטית-רגשית, בסאונד הילינג עם קערות טיבטיות, בביואורגונומי ובכלים נוספים המחברים גוף-נפש-תודעה למרחב אחד מרפא.<br><br>אני אמא לשלושה בוגרים מדהימים, לשני כלבים מתוקים, ואמא לאבא אהוב ואוהב.<br>אני גם מעצבת אופנה ומורה, בעלת בית לימוד לתפירה - מרחב שהוא לא רק יצירה, אלא מקום תרפי לנשמה.<br>כי אצלי גם חוט ומחט פותחים לב.<br><br>אבל מעבר לתארים,<br>אני אישה שחיה אהבה.<br>אלטרואיסטית בנשמה.<br>ילדת רוח שגדלה להיות מטפלת של אור.</p>
+      
+      
     </div>
     <div class="profile-image-wrapper">
       <div class="profile-backplate"></div>
@@ -747,7 +772,40 @@
   </div>
 </section>
 
-<section class="about-values-section" data-layout-spec="About-values">
+
+
+
+
+<section class="about-profile-section" data-layout-spec="About-profile" id="temp-section-1770652182770">
+  <div class="profile-container">
+    <div class="profile-content">
+      <h2>הסיפור שלי</h2>
+      <p><span><span><b>איך הכל התחיל</b></span></span><br>מאז שאני זוכרת את עצמי הייתי ילדת רוח&nbsp;<br>
+שואלת שאלות גדולות על אהבה, משמעות וחיים.<br>
+גדלתי בסביבה מעשית והישרדותית, בלי מרחב לדבר על העולמות האלו.<br>
+מתוך פחד ניסיתי להשתיק את השאלות, אך היכולת להרגיש אנשים נשארה, והובילה אותי שוב ושוב לעזור לאחרים, בלי כלים מסודרים, מה שתסכל אותי.<br>
+במשך שנים ניסיתי להגיע לעולם הטיפול, אך המשכתי בינתיים לזרום, ללמוד וליצור.<br>
+פתחתי בית ספר קטן לתפירה, ושם גיליתי שאנשים מגיעים כדי להרגיש, לא רק לתפור. התפירה הפכה לתרפיה.<br>
+בשנת 2021 הגיעה נקודת המפנה.<br>
+נכנסתי לטיפול, והרגשתי שהגעתי למקור שחיפשתי מאז הילדות.<br>
+הכרתי את הגישה והידע של ד״ר נאדר בוטו וידעתי שזה הנתיב שלי.<br>
+נרשמתי ללימודים, הוסמכתי, ומאז אני ממשיכה ללמוד, להתפתח ולטפל, וללוות אנשים במסעות עמוקים של ריפוי, כפי שאני עברתי.&nbsp;&nbsp;<br><br><b>היום<br></b>
+אני מלווה אנשים שמרגישים שזה הזמן להקשיב פנימה, להשתחרר ולחיות מתוך נוכחות, רווחה ואמת.<br>
+המרחב שאני יוצרת הוא עדין, בטוח ומכיל<br>
+מקום שבו מותר להרגיש, לנשום, להשתנות ולגדול.<br>
+אני כאן בשבילך,<br>
+ברוך, בכנות ובאהבה.<br></p>
+      
+      
+    </div>
+    <div class="profile-image-wrapper">
+      <div class="profile-backplate"></div>
+      <div class="profile-image-container">
+        <img data-placeholder="about-profile-portrait" data-context="Professional portrait of a warm, compassionate wellness practitioner in her 40s, wearing natural earth-toned clothing, soft natural lighting, gentle smile, serene expression, captured in a calm studio setting with subtle natural elements in the background, conveying trust and healing energy" width="600" height="750" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='750'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%90%D7%99%D7%9C%D7%A0%D7%99%D7%AA%20%D7%A9%D7%99%D7%99%D7%98%20%D7%A9%D7%A8%D7%95%D7%9F%20-%20%D7%9E%D7%98%D7%A4%D7%9C%D7%AA%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA%20%D7%95%D7%A8%D7%95%D7%95%D7%97%D7%94%20%D7%94%D7%95%D7%9C%D7%99%D7%A1%D7%98%D7%99%D7%AA%3C/text%3E%3C/svg%3E" alt="אילנית שייט שרון - מטפלת בריאות ורווחה הוליסטית">
+      </div>
+    </div>
+  </div>
+</section><section class="about-values-section" data-layout-spec="About-values">
   <div class="values-container">
     <h2 class="values-title">העקרונות המנחים אותנו</h2>
     <div class="values-grid">
@@ -802,7 +860,7 @@
 </section>
   </main>
   
-  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo" /><p class="footer-description">מרכז לבריאות ורווחה המציע שירותים מקצועיים ומסורים לשיפור איכות החיים והבריאות הכללית שלך.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:[business_email]">[business_email]</a></li><li><i class="fas fa-phone"></i><a href="tel:[business_phone]">[business_phone]</a></li><li><a href="/about"><i class="fas fa-map-marker-alt"></i><span>[business_address]</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><div class="footer-copyright"><p>© 2026 אילנית שייט שרון. כל הזכויות שמורות.</p></div><div class="footer-attribution"><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
+  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="אילנית שייט שרון" class="logo"><p class="footer-description">מרכז לבריאות ורווחה המציע שירותים מקצועיים ומסורים לשיפור איכות החיים והבריאות הכללית שלך.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-nav"><li><a href="/about">אודות</a></li><li><a href="/services">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:ilanitsharon@gmail.com">ilanitsharon@gmail.com</a></li><li><i class="fas fa-phone"></i><a href="tel:054-6650530">054-6650530</a></li><li><a href="/about"><i class="fas fa-map-marker-alt"></i><span>מירון 15 קדימה, קדימה, Israel</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><div class="footer-copyright"><p>© 2026 אילנית שייט שרון. כל הזכויות שמורות.</p></div><div class="footer-attribution"><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
   
   <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -919,6 +977,76 @@
           observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
         });
       }, 500);
+    })();
+    </script>
+
+    <script id="zappy-mobile-lang-menu-script">
+    (function() {
+      function initMobileLangMenu() {
+        if (window.innerWidth > 768) {
+          var existingMenu = document.querySelector('.mobile-lang-menu');
+          if (existingMenu) existingMenu.remove();
+          return;
+        }
+        if (document.querySelector('.mobile-lang-menu')) return;
+        var switcher = document.querySelector('.lang-switcher');
+        if (!switcher) return;
+        var dropdown = switcher.querySelector('.lang-switcher-dropdown');
+        if (!dropdown) return;
+        var options = dropdown.querySelectorAll('.lang-option');
+        if (options.length === 0) return;
+        var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('nav ul');
+        if (!navMenu) return;
+        var currentLang = document.documentElement.lang || 'en';
+        var langConfigs = {
+          he: {name:'עברית',flag:'https://api.iconify.design/circle-flags/il.svg'},
+          en: {name:'English',flag:'https://api.iconify.design/circle-flags/us.svg'},
+          ar: {name:'العربية',flag:'https://api.iconify.design/circle-flags/sa.svg'},
+          fr: {name:'Français',flag:'https://api.iconify.design/circle-flags/fr.svg'},
+          es: {name:'Español',flag:'https://api.iconify.design/circle-flags/es.svg'},
+          de: {name:'Deutsch',flag:'https://api.iconify.design/circle-flags/de.svg'},
+          ru: {name:'Русский',flag:'https://api.iconify.design/circle-flags/ru.svg'},
+          zh: {name:'中文',flag:'https://api.iconify.design/circle-flags/cn.svg'},
+          ja: {name:'日本語',flag:'https://api.iconify.design/circle-flags/jp.svg'},
+          pt: {name:'Português',flag:'https://api.iconify.design/circle-flags/br.svg'},
+          it: {name:'Italiano',flag:'https://api.iconify.design/circle-flags/it.svg'},
+          ko: {name:'한국어',flag:'https://api.iconify.design/circle-flags/kr.svg'}
+        };
+        var container = document.createElement('div');
+        container.className = 'mobile-lang-menu';
+        var currentConfig = langConfigs[currentLang] || {name:currentLang,flag:''};
+        var toggleBtn = document.createElement('button');
+        toggleBtn.className = 'mobile-lang-toggle';
+        toggleBtn.type = 'button';
+        var currentFlagHtml = currentConfig.flag ? '<img src="' + currentConfig.flag + '" width="20" height="20" alt="" style="border-radius:50%;margin-right:8px;margin-left:8px;">' : '';
+        toggleBtn.innerHTML = currentFlagHtml + currentConfig.name;
+        container.appendChild(toggleBtn);
+        var optionsDiv = document.createElement('div');
+        optionsDiv.className = 'mobile-lang-options';
+        var currentLink = document.createElement('a');
+        currentLink.className = 'mobile-lang-option active';
+        currentLink.href = '#';
+        currentLink.innerHTML = currentFlagHtml + currentConfig.name;
+        optionsDiv.appendChild(currentLink);
+        options.forEach(function(opt) {
+          var link = document.createElement('a');
+          link.className = 'mobile-lang-option';
+          link.href = opt.getAttribute('href');
+          link.innerHTML = opt.innerHTML;
+          optionsDiv.appendChild(link);
+        });
+        container.appendChild(optionsDiv);
+        navMenu.appendChild(container);
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleBtn.classList.toggle('expanded');
+          optionsDiv.classList.toggle('expanded');
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileLangMenu); }
+      else { initMobileLangMenu(); }
+      window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
     })();
     </script>
 </body></html>
